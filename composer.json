@@ -1,24 +1,18 @@
 {
-    "name": "vendor_slug/package_slug",
-    "description": ":package_description",
-    "keywords": [
-        ":vendor_name",
-        "laravel",
-        "package_slug"
-    ],
-    "homepage": "https://github.com/vendor_slug/package_slug",
+    "name": "cardboardmachete/machete",
+    "description": "A PBBG library",
+    "homepage": "https://github.com/cardboardmachete/machete",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
-            "role": "Developer"
+            "name": "Caleb",
+            "email": "caleb@cardboardmachete.com"
         }
     ],
     "require": {
         "php": "^8.0",
-        "spatie/laravel-package-tools": "^1.4.3",
-        "illuminate/contracts": "^8.37"
+        "illuminate/contracts": "^8.37",
+        "illuminate/support": "^8.48"
     },
     "require-dev": {
         "brianium/paratest": "^6.2",
@@ -30,13 +24,19 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
+            "CardboardMachete\\Machete\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "CardboardMachete\\Machete\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "CardboardMachete\\Machete\\MacheteServiceProvider"
+            ]
         }
     },
     "scripts": {
@@ -46,16 +46,6 @@
     },
     "config": {
         "sort-packages": true
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
-            ],
-            "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\SkeletonFacade"
-            }
-        }
     },
     "minimum-stability": "dev",
     "prefer-stable": true

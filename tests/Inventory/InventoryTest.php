@@ -1,8 +1,10 @@
 <?php
 
-namespace VendorName\Skeleton\Tests;
+namespace Machete\Tests\Inventory;
 
-class ExampleTest extends TestCase
+use Machete\Tests\TestCase;
+
+class InventoryTest extends TestCase
 {
     /** @test */
     public function true_is_true()
