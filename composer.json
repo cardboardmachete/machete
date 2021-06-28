@@ -1,5 +1,6 @@
 {
     "name": "cardboardmachete/machete",
+    "type": "library",
     "description": "A PBBG library",
     "homepage": "https://github.com/cardboardmachete/machete",
     "license": "MIT",
@@ -30,13 +31,6 @@
     "autoload-dev": {
         "psr-4": {
             "CardboardMachete\\Machete\\Tests\\": "tests"
-        }
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "CardboardMachete\\Machete\\MacheteServiceProvider"
-            ]
         }
     },
     "scripts": {
