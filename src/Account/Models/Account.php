@@ -2,10 +2,16 @@
 
 namespace Machete\Account\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Machete\Account\Factories\AccountFactory;
+use Machete\Character\Models\Character;
 
 class Account extends Authenticatable
 {
+    use HasFactory;
+
     /**
      * The attributes that are mass assignable.
      *
@@ -35,4 +41,19 @@ class Account extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function characters(): HasMany
+    {
+        return $this->hasMany(Character::class);
+    }
+
+    /**
+     * Create a new factory instance for the model.
+     *
+     * @return \Illuminate\Database\Eloquent\Factories\Factory
+     */
+    protected static function newFactory()
+    {
+        return AccountFactory::new();
+    }
 }
