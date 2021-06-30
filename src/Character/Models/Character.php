@@ -5,8 +5,8 @@ namespace Machete\Character\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Machete\Character\Factories\CharacterFactory;
 use Machete\Account\Models\Account;
+use Machete\Character\Factories\CharacterFactory;
 
 class Character extends Model
 {
